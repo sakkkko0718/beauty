@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TrearmentController;
 use App\Models\Category;
@@ -29,6 +30,8 @@ Route::get('/select',function(){
 Route::get('/categories',[CategoryController::class,'index']);
 
 Route::get('/treatments',[TrearmentController::class,'index']);
+
+Route::get('/posts',[PostController::class,'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
