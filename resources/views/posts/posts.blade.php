@@ -5,7 +5,7 @@
     <div class="post">
         @foreach($posts as $post)
         {{-- ユーザーの情報 --}}
-        <div class="users"><div>ユーザー名：</div><div>年齢：</div><div>肌質：</div><div>お悩み：</div></div>
+        <div class="users"><div>ユーザー名：{{$post->users->name}}</div><div>年齢：</div><div>肌質：</div><div>お悩み：</div></div>
         {{-- ユーザーが受けた施術の内容 --}}
         <div class="treatments"><div>施術名：</div><div>施術回数：{{$post->count}}回</div>
         <div>レビュー評価：@for($i=0; $i<$post->review; $i++)<span>★</span>@endfor</div></div>

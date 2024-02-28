@@ -22,5 +22,9 @@ class Post extends Model
         'review' => 'integer',
     ];
 
+    public function users(){
+        return $this->belongsTo('App\Modeles\User','user_id','user_id');
+    }
+
     use HasFactory;
 }

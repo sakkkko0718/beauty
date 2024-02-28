@@ -17,11 +17,31 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $table = 'users';
+    protected $primaryKey = 'user_id';
+
     protected $fillable = [
         'name',
         'email',
         'password',
+        'birth',
+        'skinType',
+        'problem',
     ];
+
+    public static $rules = [
+        'user_id' => 'integer',
+        'name' => 'string',
+        'email' => 'string',
+        'password' => 'string',
+        'birth' => 'date',
+        'skinType' => 'string',
+        'problem' => 'string',
+    ];
+
+    public function posts(){
+        return $this->hasMany('App\Modeles\Post','user_id','user_id');
+    }
 
     /**
      * The attributes that should be hidden for serialization.
