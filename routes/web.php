@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TrearmentController;
+use App\Models\Category;
+use App\Models\Treatment;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +21,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('top');
 });
+
+Route::get('/select',function(){
+    return view('select');
+});
+
+Route::get('/categories',[CategoryController::class,'index']);
+
+Route::get('/treatments',[TrearmentController::class,'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

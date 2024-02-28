@@ -6,5 +6,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <nav></nav>
+    @yield('content')
 </body>
+
+<style>
+    a {
+        text-decoration: none;
+        color: #595757;
+    }
+</style>

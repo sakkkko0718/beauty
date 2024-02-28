@@ -98,6 +98,10 @@
       .bd-mode-toggle {
         z-index: 1500;
       }
+      a {
+        text-decoration: none;
+        color: #595757;
+      }
     </style>
 
     
@@ -133,8 +137,9 @@
     <div class="p-5 mb-4 bg-body-tertiary rounded-3">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">美容の真実、あなたの美しさの秘密がここに</h1>
-        <p class="col-md-8 fs-4">キレイ部！では、リアルなクチコミが集まる美容のオアシスです。正直で素直なレビューが、あなたの美容の選択をサポートします。他のユーザーの経験共有で、美の新しい次元を探求しましょう。美しさは個々の旅。キレイ部！があなたの美容のコンパスとなります。</p>
-        <button class="btn btn-outline-dark" type="button">クチコミを探す</button>
+        <img src="image/beauty01.jpg" alt="" style="width: 100%; margin-bottom:10px;">
+        <p class="fs-5">キレイ部！では、リアルなクチコミが集まる美容のオアシスです。正直で素直なレビューが、あなたの美容の選択をサポートします。他のユーザーの経験共有で、美の新しい次元を探求しましょう。美しさは個々の旅。キレイ部！があなたの美容のコンパスとなります。</p>
+        <button class="btn btn-outline-dark" type="button"><a href="/select">クチコミを探す</a></button>
       </div>
     </div>
 
