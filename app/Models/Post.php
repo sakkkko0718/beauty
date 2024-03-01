@@ -22,9 +22,14 @@ class Post extends Model
         'review' => 'integer',
     ];
 
-    public function users(){
-        return $this->belongsTo('App\Modeles\User','user_id','user_id');
+    public function user(){
+        return $this->belongsTo(User::class,'user_id','user_id');
     }
 
+    public function treatments(){
+        return $this->belongsToMany(Treatment::class,'posttreatments','post_id','treatment_id')
+        ->withPivot('count','picture','comment','review');
+    }
+    
     use HasFactory;
 }

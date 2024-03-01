@@ -20,5 +20,6 @@ class Treatment extends Model
         'menu' => 'string',
     ];
 
+
     use HasFactory;
 }

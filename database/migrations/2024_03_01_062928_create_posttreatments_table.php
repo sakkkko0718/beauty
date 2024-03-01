@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->increments('post_id');
-            $table->integer('user_id');
+        Schema::create('posttreatments', function (Blueprint $table) {
+            $table->id();
+            $table->integer('post_id');
+            $table->integer('treatment_id');
+            $table->integer('count');
+            $table->string('picture');
+            $table->text('comment');
+            $table->integer('review');
             $table->timestamps();
         });
     }
@@ -23,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('posttreatments');
     }
 };
